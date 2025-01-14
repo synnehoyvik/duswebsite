@@ -137,6 +137,7 @@
   padding-left: 15%;
   padding-right: 15%;
   margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 /* Spesifikk skrifttype for Safari */
@@ -170,7 +171,7 @@
     margin-left: 5%;
   }
   .port {
-    min-height: 300px;
+    min-height: 150px;
     flex-direction: column;
     flex-wrap: wrap;  
     align-items: flex-end;  /* Justerer innholdet til bunnen av port */
@@ -219,9 +220,7 @@
     max-width: 100%;
     margin-bottom: 5%;
   }
-  .h3 {
-    font-size:15px;
-  }
+
 }
 
 .image:hover {
@@ -231,7 +230,7 @@
 }
 
 .portfolio h3 {
-  font-size: 1vw;
+  font-size: 1.1vw;
   text-align: left;
   color: black;
   height: 100%;
@@ -344,6 +343,7 @@
   flex-direction: row;
   justify-content: space-between;
   height: 30%;
+  gap:5%;
   }
 
   .omoss_bilder img {

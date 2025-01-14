@@ -39,6 +39,13 @@ header {
   z-index: 100; /* Sørg for at headeren er over innhold */
 }
 
+.logohjem {
+  position: fixed;
+  top: 2%;
+  left: 10%;
+  width: 5%;
+}
+
 li {
   list-style: none;
 }
