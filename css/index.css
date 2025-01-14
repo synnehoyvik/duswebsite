@@ -1,0 +1,438 @@
+.logo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20%;
+  transition: all 0.5s ease; /* For jevne overganger */
+}
+
+/* Endre startposisjonen på mobil */
+@media (max-width: 600px) {
+  .logo {
+    top: 27%; /* Flytter logoen lenger opp på skjermen */
+  }
+}
+
+.logo.scrolled {
+  top: 5%;
+  left: 5%;
+  transform: translate(0, 0);
+  width: 5%;
+}
+
+.bakgrunnsbilde_parallax {
+  background-image: url('../img/skygge_glød.png'); /* Legg til bildet ditt her */
+  height: 95vh; /* Full høyde */
+  width: 90%;
+  background-position: left; /* Sentraliser bildet */
+  background-size: cover;
+  background-attachment: fixed; /* Gjør at bildet holder seg fast */
+  background-repeat: no-repeat; /* Unngå at bildet gjentar seg */
+  box-sizing: border-box; /* Padding inkludert */
+}
+
+/* For mobilskjermer */
+@media (max-width: 768px) {
+  .bakgrunnsbilde_parallax {
+      height: 50vh; /* Fortsatt full skjermhøyde */
+      width: 90%; /* Full bredde */
+      background-size: auto 100%; /* Hele høyden vises også på mobil */
+      background-attachment: scroll; /* For bedre mobilytelse */
+  }
+}
+
+.bakgrunnsfarge {
+  background-color: #F7F4F0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sloganboks {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #F7F4F0;
+  box-sizing: border-box; /* Padding inkludert */
+
+  display: flex; /* Bruk flexbox */
+  flex-direction: column; /* Plasserer elementene over hverandre */
+  align-items: center; /* Sentrerer elementene horisontalt */
+  justify-content: center; /* Sentrerer elementene vertikalt */
+  gap: 5%; /* Avstand mellom barna */
+  top: auto; /* Legger avstand over forelder-elementet */
+}
+
+.slogan2 {
+  font-family: "classico-urw", sans-serif;
+  font-weight: 150;
+  font-style: normal; 
+  line-height: 1.6;
+  color: #000000;
+  font-size: clamp(10px, 2.5vw, 30px); /* Responsiv skriftstørrelse 
+  - Minimum font-size: 16px 
+  - Optimal font-size: 2.5% av viewport-bredden 
+  - Maksimum font-size: 30px 
+  (originalt 15px) */
+  text-align: center;
+  width: 45%; /* Juster bredde etter behov */
+  transition: 2s ease;
+  opacity: 1;
+  box-sizing: border-box; /* Padding inkludert */
+  padding-top: 10%;
+}
+
+.lenke {
+  font-family: "classico-urw", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #6e6e73;
+  font-size: clamp(8px, 2.5vw, 15px); /* Responsiv skriftstørrelse */
+  text-align: center;
+
+  width: 50%; /* Juster bredde etter behov */
+}
+
+.lenke:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+/* Responsiv tilpasning for mobil */
+@media (max-width: 600px) {
+  .slogan2 {
+    width: 90%; /* Gjør teksten bredere på små skjermer */
+    font-size: clamp(10px, 3vw, 16px); /* Juster skriftstørrelsen for små skjermer */
+  }
+
+  .lenke {
+    width: 85%; /* Gjør lenken bredere på små skjermer */
+    font-size: clamp(5px, 2vw, 10px); /* Øk skriftstørrelsen for lenken */
+  }
+
+  .sloganboks {
+    padding: 30px; /* Øk padding for mer plass på små skjermer */
+    gap: 15px; /* Mindre avstand mellom elementene */
+  }
+}
+
+/*portfoliocode */
+
+.portfolio {
+  font-family: "classico-urw", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  z-index: 9;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  width: 100%;
+  transition: all 1s ease;
+  box-sizing: border-box; /* Forutsigbar oppførsel med padding og margin */
+  padding-left: 15%;
+  padding-right: 15%;
+  margin-top: 10%;
+}
+
+.portfolio > * {
+  flex: 1;
+  min-height: min-content;
+}
+
+.port {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: baseline;
+  align-items: baseline;
+  align-content: baseline;
+  transition: 1s ease;
+}
+
+.port:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+  justify-content: baseline;
+
+}
+
+.port:hover div {
+  cursor: pointer;
+  transition: 0.5s ease;
+  left: 50%;
+}
+
+.container {
+  width: 50%;
+}
+
+.container:hover .imgtext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.image {
+  visibility: visible;
+  backface-visibility: hidden;
+  transition: 1.0s ease;
+  max-height: 70%;
+  max-width: 70%;
+}
+
+.image:hover {
+  cursor: pointer;
+  opacity: 0.4;
+  transform: scale(1.1);
+}
+
+.portfolio h3 {
+  font-size: 1vw;
+  text-align: left;
+  color: black;
+  width: 50%;
+  height: 100%;
+}
+
+.imgtext {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  transition: 1.5s ease;
+  opacity: 0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.port {
+  animation: linear animate-in-and-out;
+  animation-timeline: view();
+}
+
+@keyframes animate-in-and-out {
+  0% { /* Tilsvarer "entry 0%" */
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% { /* Mellomfase, kan justeres hvis ønskelig */
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% { /* Tilsvarer "exit 100%" */
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/*om oss*/
+.omoss {
+  display: flex;
+  flex-direction: column; /* Plasser div-elementene vertikalt */
+  align-items: center; /* Sentrer elementene horisontalt */
+  justify-content: center; /* Sentrum vertikalt også */  
+  z-index: 3;
+  width: 100%;
+  text-align: center;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 50px 50px 0 0;
+  transition: 1.2s all ease;
+  box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1); /* Myk og svak skygge */
+  padding-left: 15%; /* Plass inni */
+  padding-right: 15%; /* Plass inni */
+  padding-top: 5%; /* Plass inni */
+  padding-bottom: 5%; /* Plass inni */
+  box-sizing: border-box; /* Padding inkludert */
+}
+
+.omossgrid {
+  padding-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+}
+
+#overskrift_omoss {
+  font-family: "classico-urw", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #8a8a8a;
+  /*font-size: 1vw;*/
+  font-size: clamp(7px, 1.5vw, 16px); /* Responsiv skriftstørrelse */
+  align-self: flex-start; /* Plasser teksten øverst */
+
+}
+
+.tekstomoss {
+  font-family: "classico-urw", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  color: #434343;
+  max-width: 40%;
+  /*font-size: 1vw;*/
+  font-size: clamp(6px, 1.0vw, 15px); /* Responsiv skriftstørrelse */
+  line-height: 1.8;
+  align-self: flex-start; /* Plasser teksten øverst */
+
+  /*width: 100%;
+  line-height: 2;
+  box-sizing: border-box; /* Padding inkludert */
+}
+
+.omoss_bilder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Sentrum for bildene */
+  flex-wrap: wrap; /* Tillater radbryting hvis nødvendig */  
+}
+
+.omoss_bilder img {
+  max-width: 150px; /* Bilder tilpasser seg containerens bredde */
+  max-height: 100%; /* Begrens maksimal høyde */
+  width: auto; /* Sikrer at bildene beholder proporsjonene */
+  height: auto; /* Sikrer at bildene beholder proporsjonene */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Myk skygge */
+}
+
+/* Responsivt gridoppsett */
+@media (max-width: 768px) {
+  .omossgrid {
+    flex-direction: column;
+  }
+  
+  #overskrift_omoss {
+    text-align: left; /* Til venstre for større skjermer */
+  }
+
+  p.tekstomoss {
+    max-width: 100%;
+  }
+  
+  .omoss_bilder {
+  flex-direction: row;
+  justify-content: space-between;
+  height: 30%;
+  }
+
+  .omoss_bilder img {
+    max-height: 100px; /* Bilder tilpasser seg containerens bredde */
+
+  }
+  
+}
+
+@media (min-width: 1024px) {
+  .omossgrid {
+    gap: 3rem; /* Mer avstand mellom elementene på store skjermer */
+  }
+}
+
+/*button*/
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 40px; /* Place the button at the bottom of the page */
+  right: 40px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color */
+  height: 20px;
+  width: 20px; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  opacity: 0.6;
+}
+
+#myBtn img {
+  width: 40px;
+  height: 40px;
+  transition: 0.3s ease;
+}
+
+#myBtn:hover {
+  cursor: pointer;
+  box-shadow: #4c4c4f;
+  /* Add a dark-grey background on hover */
+}
+
+/*telefon*/
+
+@media (max-width: 600px) {
+  .logo {
+    width: 30%;
+  }
+
+  .logo.scrolled {
+    width: 10%; /* Mindre endestørrelse etter scroll på mobil */
+  }
+
+  /*@keyframes logoscroll {
+    from {
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+    }
+    to {
+      position: fixed;
+      width: 10%;
+      left: 5%;
+      top: 0px;
+      transition: transform(0%, 0%);
+    }
+  }*/
+
+  #slogan {
+    font-size: 20px;
+  }
+
+  .portfolio {
+    grid-template-columns: auto;
+    width: 90%;
+  }
+
+  .port {
+    flex-direction: column;
+    align-items: center;
+  }
+  .port:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .omoss img {
+    scale: 0.7;
+    margin: auto;
+  }
+
+  .omossgrid {
+    grid-template-columns: auto auto;
+    width: 90%;
+    gap: 2%;
+  }
+}
+/*enorme skjermer*/
+@media (min-width: 1900px) {
+  .portfolio {
+    width: 40%;
+  }
+}

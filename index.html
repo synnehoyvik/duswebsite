@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css\sitecss.css" />
+    <link rel="stylesheet" href="css\index.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vfr3hyb.css"> <!-- overskrifter -->
+    <link rel="stylesheet" href="https://use.typekit.net/vfr3hyb.css"> <!-- tekst -->
+    <link rel="stylesheet" href="https://use.typekit.net/vfr3hyb.css"> <!-- slogan -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dus Arkitekter</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_lys.png" />
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/addPortfolio.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <a href="index.html">
+        <img class="logo" src="img/logo_lys.png" alt="Logo Dus" />
+      </a>
+
+    <h2 class="navndus"> DUS ARKITEKTER </h2>
+    
+      <nav class="navbar" id="navbar">
+
+        <ul class="menu"><!-- start meny -->
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">HJEM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">PROSJEKTER</a>
+          </li>
+          <li class="nav-item">
+            <a href="#bottombar" class="nav-link">TJENESTER</a>
+          </li>
+          <li class="nav-item">
+            <a href="#om_oss" class="nav-link">OM OSS</a>
+          </li>
+          <li class="nav-item">
+            <a href="#bottombar" class="nav-link">KONTAKT</a>
+          </li>
+        </ul><!-- slutt meny -->
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="bakgrunnsbilde_parallax"></div>
+    
+<div class="bakgrunnsfarge"><!-- start bakgrunn -->
+
+    <div class="sloganboks">
+      <p class="slogan2"> Dus handler om å være i harmoni med noe eller noen, 
+        og det har blitt grunnleggende for vår estetikk som ellers er preget av renhet, 
+        funksjonalitet og tidløs eleganse.</p> 
+        <a  class="lenke" href="#tjenester" style="text-decoration: none">  <span style="color:#858589">SE HVA VI KAN TILBY</span> |  VÅRE TJENESTER</a>
+    </div>
+
+    <div class="portfolio" id="portfolio">
+      <script>
+      addToPortfolio(
+          "img/nationalteateret/render1.jpg",
+          "THE THREE TEMPORARY, <br>2023",
+          "nationaltheatret.html"
+        );
+        addToPortfolio(
+          "img/samnøy/samnøy_plantegning.jpg",
+          "SOMMERHYTTE PÅ SAMNØY,<br> 2022",
+          "sommerhytte.html"
+        );
+        addToPortfolio(
+          "img/sommerhus/Render.jpg", 
+          "SOMMERHUS I DANMARK,<br> 2022", 
+          "sommerhus.html"
+          
+        );
+        addToPortfolio(
+          "img/masteroppgave/master_render.jpeg", 
+          "[...] ROMMELIG SOM HAVET,<br> 2024", 
+          "masteroppgave.html"
+        );
+        addToPortfolio(
+          "img/interiør.png", 
+          "ARKITEKTURVISUALISERING,<br> Virtuelle prosjekter", 
+          "prosjektmal2.html"
+        );
+      
+      </script>
+ </div> 
+
+    </div><!-- slutt bakgrunnsfarge -->
+
+    <section style="z-index: 10" class="omoss" id="omoss">
+
+      <div class="omossgrid">
+        <h2 id="overskrift_omoss">Om Dus Arkitekter</h2>
+        <p class="tekstomoss">Vi er et lite, men ambisiøst arkitektkontor drevet av to engasjerte arkitekter - 
+          Synne Spjeld Høyvik og Anniken Marie Haugan. Navnet Dus Arkitekter kommer fra vår visjon om å være "dus" 
+          med våre klienter, prosjekter og omgivelsene selv. For oss handler Dus om å være i harmoni med noe eller 
+          noen, og det har blitt grunnleggende for vår estetikk som ellers er preget av renhet, funksjonalitet og 
+          tidløs eleganse. <br><br>
+          Vi har erfaring innenfor tilbygg og transformasjon av hytter og eneboliger, men vårt interessefelt er bredt og vi tar gjerne 
+          både større og mindre prosjekter. Så hvis vi skulle være av interesse, ikke nøl med å ta kontakt for en hyggelig, uforpliktende prat.</p>
+          <div class="omoss_bilder"><img src="img/oss.jpg" alt="Oss bak Dus!"/>
+          <img src="img/oppheng.jpg" alt="Oss bak Dus!"/></div>
+          
+      </div>
+      
+    </section>
+
+
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">
+      <img src="img/pilopp.png" alt="til toppen" />
+    </button>
+
+    <div class="bakgrunnsbilde_parallax2">
+    <footer>
+      <p class="lyst"> KONTAKT OSS</p>
+
+      <div id="bottombar">
+        <p class="bottombartxt" style="text-decoration: none">
+          © Dus Arkitekter AS
+        </p>
+
+        <a class="lyst" href="mailto:post@dusarkitekter.no" style="text-decoration: none">post@dusarkitekter.no</a>
+        
+        <p class="bottombartxt">
+          <a class="smicon" href="https://linkedin.com"
+            ><ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a class="smicon" href="https://instagram.com"
+            ><ion-icon name="logo-instagram"></ion-icon
+          ></a>
+        </p>
+      </div>
+      
+    </footer>
+  </div>
+
+    <script src="js\indexscript.js"></script>
+    <script src="js\sitejs.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

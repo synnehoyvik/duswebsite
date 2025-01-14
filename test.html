@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    html{
+        height:100%;
+    }
+    body{
+        height:100%
+    }
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+  z-index: 2;
+  text-align: center;
+  transition: all 1s ease;
+  gap: 10%;
+  border-bottom: #4c4c4f;
+  border-style: solid;
+}
+
+
+.portfolio > * {
+  flex: 1; 
+  min-height: min-content; 
+}
+    
+    
+.port1{
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    width: 90%;
+    align-items: baseline;
+    display: flex;
+    float: left;
+    margin-right: auto;
+    transition: 1s all;
+    padding: 5%;
+    }
+
+    
+   
+    
+.image {
+    visibility: visible;
+    backface-visibility: hidden;
+    transition: 1.5s ease;
+    max-height:80%
+      }
+    
+.image:hover{
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(1.1);
+      }
+    
+.portLeft{
+    position: relative;
+    width: 90%;
+    align-items: baseline;
+    display: flex;
+    margin-right: auto;
+    transition: 1s ease;
+    padding: 5%;
+        }
+    
+    
+.portLeft:hover div{
+    cursor: pointer;
+    transition: 0.5s ease;
+    left:50%;
+    }
+    
+.portRight{
+    position: relative;
+    display: flex;
+    width: 50%;
+    transition: 1s all;
+    align-items: baseline;
+    margin-left: 50%;
+         
+    }
+
+    
+.portRight:hover div{
+    cursor: pointer;
+    transition: 0.5s ease;
+    visibility: visible;
+    left:40%;
+    }
+    
+
+    .portfolio h3{
+        padding: 3%;
+    }
+
+.imgtext{
+    color: black;
+    font-size: 20px;
+    position: absolute;
+     top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    visibility: hidden;
+    transition: 1.5s ease;
+    opacity: 0;
+}
+
+.port1 .imgtext{
+    left:20%;
+}
+
+.portRight .imgtext{
+    left:60%;
+}
+
+.portLeft .imgtext{
+    left:20%;
+}
+
+.container:hover .imgtext{
+    visibility: visible;
+    opacity: 1;
+}
+
+  
+</style>    
+</head>
+<body>
+    <section class="portfolio" id="portfolio">
+        <div class="port1">
+            <div class="container">
+            <a href="C:\Users\phili\programmering\Dus_Arkitekter\dusFrontend\Pages\portefoelje\prosjektmal\prosjektmal.html">
+            <img src="C:\Users\phili\programmering\Dus_Arkitekter\dusFrontend\Pictures\hytte.jpg" class="image" href=>
+            </a>
+            <h2 class="imgtext">Maurset</h2>
+            </div>
+        <h3 class="textRight"> Plasseffektiv hytte  </h3>
+        </div>
+
+        <div class="portRight"> 
+            <h3> Pergola til hytte  </h3>
+            <div class="container">
+            <a href="">
+            <img src="C:\Users\phili\programmering\Dus_Arkitekter\dusFrontend\Pictures\pergola.jpg" class="image">
+            </a>
+                <h2 class="imgtext">Maurset</h2>
+            </div>
+         
+        </div>
+
+        <div class="portLeft">
+            <div class="container">
+            <a href="">
+            <img src="C:\Users\phili\programmering\Dus_Arkitekter\dusFrontend\Pictures\slott.jpg" class="image">
+            </a>
+            <h2 class="imgtext">Monaco</h2>
+            </div>
+        <h3> Slott til Philip  </h3> \
+        </div>
+
+        <div class="portRight"> 
+            <h3> Pergola til hytte  </h3>
+            <div class="container">
+            <a href="">
+            <img src="C:\Users\phili\programmering\Dus_Arkitekter\dusFrontend\Pictures\pergola.jpg" class="image">
+            </a>
+                <h2 class="imgtext">Eksempel</h2>
+            </div>
+        </div>
+
+    </section>
+      
+</body>
+</html>
