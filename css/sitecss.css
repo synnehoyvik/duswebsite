@@ -170,6 +170,13 @@ a:visited {
  font-size: clamp(12px, 3vw, 17px); /* Skalerer mellom 12px og 17px basert på skjermstørrelse */font-size: clamp(12px, 3vw, 17px); /* Skalerer mellom 12px og 17px basert på skjermstørrelse */  margin-left: 5%;
 }
 
+/* Safari-spesifik stil */
+@media not all and (min-resolution:.001dpcm) { 
+  .navndus {
+    font-weight: 100;
+  }
+}
+
 .bakgrunnsbilde_parallax2 {
   height: 20vh; /* Full høyde */
   width: 100%;

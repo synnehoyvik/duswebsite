@@ -16,11 +16,6 @@
   a.appendChild(img);
   container.appendChild(a);
 
-  let p = document.createElement("p");
-  p.setAttribute("class", "imgtext");
-
-  container.appendChild(p);
-
   port.appendChild(container);
 
   let h3 = document.createElement("h3");
@@ -38,11 +33,11 @@ const elements = document.querySelectorAll('.port');
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.style.animation = 'animate-in-and-out 2s linear forwards';
+      entry.target.style.animation = 'animate-in 2s ease-out forwards';  // Kjør animasjonen
     } else {
-      entry.target.style.animation = 'none'; // Stopper animasjonen når den ikke er synlig
+      entry.target.style.animation = 'none';  // Stopper animasjonen hvis elementet forsvinner
     }
   });
-}, { threshold: 0.1 }); // 10% av elementet må være synlig for å trigge
+}, { threshold: 0.1 });  // 10% av elementet må være synlig for å trigge
 
 elements.forEach((el) => observer.observe(el));

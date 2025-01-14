@@ -10,7 +10,7 @@
 /* Endre startposisjonen på mobil */
 @media (max-width: 600px) {
   .logo {
-    top: 27%; /* Flytter logoen lenger opp på skjermen */
+    top: 40%; /* Flytter logoen lenger opp på skjermen */
   }
 }
 
@@ -35,7 +35,7 @@
 /* For mobilskjermer */
 @media (max-width: 768px) {
   .bakgrunnsbilde_parallax {
-      height: 50vh; /* Fortsatt full skjermhøyde */
+      height: 65vh; /* Fortsatt full skjermhøyde */
       width: 90%; /* Full bredde */
       background-size: auto 100%; /* Hele høyden vises også på mobil */
       background-attachment: scroll; /* For bedre mobilytelse */
@@ -139,6 +139,13 @@
   margin-top: 10%;
 }
 
+/* Spesifikk skrifttype for Safari */
+@media screen and (min--moz-device-pixel-ratio: 0) {
+  .portfolio {
+    font-weight: 100;
+  }
+}
+
 .portfolio > * {
   flex: 1;
   min-height: min-content;
@@ -149,16 +156,30 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: baseline;
-  align-items: baseline;
-  align-content: baseline;
+  justify-content: space-between;  /* Justerer elementene til venstre */
+  flex-wrap: nowrap;  /* Hindre at elementene bryter til ny linje */
+  align-items: flex-end;  /* Justerer innholdet til bunnen av port */
+  min-height: 500px;/* Sett min høyde for å sikre at div-en har plass */
   transition: 1s ease;
+  margin-bottom: 10%;
+}
+
+/* Responsiv tilpasning for mobil */
+@media (max-width: 900px) {
+  .portfolio {
+    margin-left: 5%;
+  }
+  .port {
+    min-height: 300px;
+    flex-direction: column;
+    flex-wrap: wrap;  
+    align-items: flex-end;  /* Justerer innholdet til bunnen av port */
+  }
 }
 
 .port:nth-child(2n + 1) {
   flex-direction: row-reverse;
   justify-content: baseline;
-
 }
 
 .port:hover div {
@@ -168,7 +189,12 @@
 }
 
 .container {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;  /* Justerer innholdet til bunnen av port */
+  width: 40%;
+  height: 100%;
 }
 
 .container:hover .imgtext {
@@ -180,8 +206,22 @@
   visibility: visible;
   backface-visibility: hidden;
   transition: 1.0s ease;
-  max-height: 70%;
-  max-width: 70%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Responsiv tilpasning for mobil */
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+  }
+  .image {
+    max-width: 100%;
+    margin-bottom: 5%;
+  }
+  .h3 {
+    font-size:15px;
+  }
 }
 
 .image:hover {
@@ -194,42 +234,23 @@
   font-size: 1vw;
   text-align: left;
   color: black;
-  width: 50%;
   height: 100%;
 }
 
-.imgtext {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  visibility: hidden;
-  transition: 1.5s ease;
-  opacity: 0;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);  /* Starter nedenfra */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);  /* Slutter på normal posisjon */
+  }
 }
 
 .port {
-  animation: linear animate-in-and-out;
-  animation-timeline: view();
-}
-
-@keyframes animate-in-and-out {
-  0% { /* Tilsvarer "entry 0%" */
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  50% { /* Mellomfase, kan justeres hvis ønskelig */
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% { /* Tilsvarer "exit 100%" */
-    opacity: 0;
-    transform: translateY(-100%);
-  }
+  opacity: 0;  /* Start med at elementet er usynlig */
+  animation: animate-in 2s ease-out forwards; /* Legg til animasjon */
 }
 
 /*om oss*/
