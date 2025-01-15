@@ -10,7 +10,7 @@
 /* Endre startposisjonen på mobil */
 @media (max-width: 600px) {
   .logo {
-    top: 40%; /* Flytter logoen lenger opp på skjermen */
+    top: 50%; /* Flytter logoen lenger opp på skjermen */
   }
 }
 
@@ -35,7 +35,7 @@
 /* For mobilskjermer */
 @media (max-width: 768px) {
   .bakgrunnsbilde_parallax {
-      height: 65vh; /* Fortsatt full skjermhøyde */
+      height: 95vh; /* Fortsatt full skjermhøyde */
       width: 90%; /* Full bredde */
       background-size: auto 100%; /* Hele høyden vises også på mobil */
       background-attachment: scroll; /* For bedre mobilytelse */
