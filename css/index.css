@@ -38,7 +38,7 @@
       height: 95vh; /* Fortsatt full skjermhøyde */
       width: 90%; /* Full bredde */
       background-size: auto 100%; /* Hele høyden vises også på mobil */
-      background-attachment: fixed; /* For bedre mobilytelse */
+      background-attachment: scroll; /* For bedre mobilytelse */
   }
 }
 
