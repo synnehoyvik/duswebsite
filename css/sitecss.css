@@ -273,11 +273,6 @@ a.lyst:hover {
   color: #000000;
 }
 
-.tjenestefelt {
-  height: 80vh;
-  background-color: red;
-}
-
 @media (max-width: 760px) {
   .bakgrunnsbilde_parallax2 {
     height: 20%;
