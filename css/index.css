@@ -11,6 +11,11 @@
 @media (max-width: 600px) {
   .logo {
     top: 50%; /* Flytter logoen lenger opp på skjermen */
+    width: 30%;
+  }
+
+  .logo.scrolled {
+    width: 10%; /* Mindre endestørrelse etter scroll på mobil */
   }
 }
 
@@ -197,13 +202,37 @@
   width: 40%;
   height: 100%;
 }
+.container a {
+  position: relative; /* Gjør teksten relativ til linken (a) */
+  display: block; /* Sørg for at linken fyller hele bildet */
+}
 
 .container:hover .imgtext {
   visibility: visible;
   opacity: 1;
 }
 
+.imgtext {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Gjør teksten synlig */
+  font-size: 1.5rem; /* Tilpass størrelsen */
+  text-align: center;
+  visibility: hidden; /* Skjul teksten som standard */
+  opacity: 0; /* Start med teksten usynlig */
+  transition: visibility 0.3s, opacity 0.3s; /* Myk overgang */
+}
+
+.container:hover .imgtext {
+  visibility: visible; /* Vis teksten */
+  opacity: 1; /* Gjør teksten synlig */
+}
+
 .image {
+  display: block;
+
   visibility: visible;
   backface-visibility: hidden;
   transition: 1.0s ease;
@@ -225,8 +254,11 @@
 
 .image:hover {
   cursor: pointer;
-  opacity: 0.4;
-  transform: scale(1.1);
+ /* opacity: 0.4;*/
+  transform: scale(1.05);
+
+  filter: brightness(50%); /* Gjør bildet mørkere */
+  background-color: rgba(0, 0, 0, 0.5); /* Legg til en svart gjennomsiktig farge */
 }
 
 .portfolio h3 {
@@ -393,13 +425,6 @@
 /*telefon*/
 
 @media (max-width: 600px) {
-  .logo {
-    width: 30%;
-  }
-
-  .logo.scrolled {
-    width: 10%; /* Mindre endestørrelse etter scroll på mobil */
-  }
 
   /*@keyframes logoscroll {
     from {

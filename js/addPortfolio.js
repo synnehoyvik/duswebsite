@@ -1,4 +1,4 @@
-  function addToPortfolio(image, imgtext, url) {
+  function addToPortfolio(image, h3Text, imgtext, url) {
   let portfolio = document.getElementById("portfolio");
   let port = document.createElement("div");
   port.setAttribute("class", "port");
@@ -16,11 +16,19 @@
   a.appendChild(img);
   container.appendChild(a);
 
+  // Legg til tekst-div for bildeteksten
+  let imgTextDiv = document.createElement("div");
+  imgTextDiv.setAttribute("class", "imgtext");
+  imgTextDiv.innerHTML = imgtext;
+  a.appendChild(imgTextDiv); //slutt bildetekst add
+
+// Legg "a" inni container
+container.appendChild(a);
+
   port.appendChild(container);
 
   let h3 = document.createElement("h3");
-  h3.innerHTML = imgtext;
-
+  h3.innerHTML = h3Text;
   port.appendChild(h3);
 
   portfolio.appendChild(port);
