@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css\sitecss.css" />
+    <link rel="stylesheet" href="css\index.css" />
+    <link rel="stylesheet" href="css/prosjektmal.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vfr3hyb.css"> <!-- overskrifter -->
+    <link rel="stylesheet" href="https://use.typekit.net/vfr3hyb.css"> <!-- tekst -->
+    <link rel="stylesheet" href="https://use.typekit.net/vfr3hyb.css"> <!-- slogan -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dus Arkitekter</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_lys.png" />
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/addTjenester.js"></script>
+  </head>
+
+  <body>
+
+    <header>
+      <a href="index.html">
+        <img class="logohjem" src="img/logo_lys.png" alt="Logo Dus" />
+      </a>
+
+    <h2 class="navndus"> DUS ARKITEKTER </h2>
+    
+      <nav class="navbar" id="navbar">
+
+        <ul class="menu"><!-- start meny -->
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">HJEM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">PROSJEKTER</a>
+          </li>
+          <li class="nav-item">
+            <a href="tjenester.html" class="nav-link">TJENESTER</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#overskrift_omoss" class="nav-link">OM OSS</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#bottombar" class="nav-link">KONTAKT</a>
+          </li>
+        </ul><!-- slutt meny -->
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+    
+
+ <div class="tjenestefelt">
+    <div class="sloganboks">
+      <p class="slogan2"> Vi har erfaring innenfor tilbygg og transformasjon av hytter og eneboliger, men vårt interessefelt er bredt og vi tar gjerne både større og mindre prosjekter. Så hvis vi skulle være av interesse, ikke nøl med å ta kontakt for en hyggelig, uforpliktende prat.</p> 
+    </div>
+
+   
+    <h1 class="overskrift_tjenster">  </h1>
+
+    <script>
+      addToTjenester(
+          "img/nationalteateret/render1.jpg",
+          "TILBYGG",
+          "Vi har erfaring innenfor tilbygg og transformasjon av hytter og eneboliger, men vårt interessefelt er bredt og vi tar gjerne både større og mindre prosjekter. Så hvis vi skulle være av interesse, ikke nøl med å ta kontakt for en hyggelig, uforpliktende prat",
+        );
+        addToTjenester(
+          "img/samnoy/samnoy_plantegning.jpg",
+          "ARKITEKTURVISUALISERING",
+          "Vi har erfaring innenfor tilbygg og transformasjon av hytter og eneboliger, men vårt interessefelt er bredt og vi tar gjerne både større og mindre prosjekter. Så hvis vi skulle være av interesse, ikke nøl med å ta kontakt for en hyggelig, uforpliktende prat",
+        );
+      </script>
+
+    </div>
+
+
+    <div class="bakgrunnsbilde_parallax2">
+    <footer>
+      <p class="lyst"> KONTAKT OSS</p>
+
+      <div id="bottombar">
+        <p class="bottombartxt" style="text-decoration: none">
+          © Dus Arkitekter AS
+        </p>
+
+        <a class="lyst" href="mailto:post@dusarkitekter.no" style="text-decoration: none">post@dusarkitekter.no</a>
+        
+        <p class="bottombartxt">
+          <a class="smicon" href="https://linkedin.com"
+            ><ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+          <a class="smicon" href="https://instagram.com"
+            ><ion-icon name="logo-instagram"></ion-icon
+          ></a>
+        </p>
+      </div>
+      
+    </footer>
+  </div>
+
+    <script src="js\indexscript.js"></script>
+    <script src="js\sitejs.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
