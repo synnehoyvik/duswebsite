@@ -1,6 +1,8 @@
 .tjenestefelt {
   height: 80vh;
   margin-top: 10%;
+  background-color: #F7F4F0;
+
 }
 
 .tjenesteboks {
@@ -172,11 +174,9 @@
 }
 
 
-
 /*telefon*/
 
 @media (max-width: 600px) {
-
 
   #slogan {
     font-size: 20px;
