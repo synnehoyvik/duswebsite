@@ -27,7 +27,7 @@
 }
 
 .bakgrunnsbilde_parallax {
-  background-image: url('../img/skygge_glød.png'); /* Legg til bildet ditt her */
+  background-image: url("../img/skygge_glød.png"); /* Legg til bildet ditt her */
   height: 95vh; /* Full høyde */
   width: 90%;
   background-position: left; /* Sentraliser bildet */
@@ -40,15 +40,15 @@
 /* For mobilskjermer */
 @media (max-width: 768px) {
   .bakgrunnsbilde_parallax {
-      height: 95vh; /* Fortsatt full skjermhøyde */
-      width: 90%; /* Full bredde */
-      background-size: auto 100%; /* Hele høyden vises også på mobil */
-      background-attachment: scroll; /* For bedre mobilytelse */
+    height: 95vh; /* Fortsatt full skjermhøyde */
+    width: 90%; /* Full bredde */
+    background-size: auto 100%; /* Hele høyden vises også på mobil */
+    background-attachment: scroll; /* For bedre mobilytelse */
   }
 }
 
 .bakgrunnsfarge {
-  background-color: #F7F4F0;
+  background-color: #f7f4f0;
   width: 100%;
   z-index: 2;
   display: flex;
@@ -60,7 +60,7 @@
   position: relative;
   width: 100%;
   height: auto;
-  background-color: #F7F4F0;
+  background-color: #f7f4f0;
   box-sizing: border-box; /* Padding inkludert */
 
   display: flex; /* Bruk flexbox */
@@ -74,10 +74,14 @@
 .slogan2 {
   font-family: "classico-urw", sans-serif;
   font-weight: 150;
-  font-style: normal; 
+  font-style: normal;
   line-height: 1.6;
   color: #000000;
-  font-size: clamp(10px, 2.5vw, 30px); /* Responsiv skriftstørrelse 
+  font-size: clamp(
+    10px,
+    2.5vw,
+    30px
+  ); /* Responsiv skriftstørrelse 
   - Minimum font-size: 16px 
   - Optimal font-size: 2.5% av viewport-bredden 
   - Maksimum font-size: 30px 
@@ -110,7 +114,11 @@
 @media (max-width: 600px) {
   .slogan2 {
     width: 90%; /* Gjør teksten bredere på små skjermer */
-    font-size: clamp(10px, 3vw, 16px); /* Juster skriftstørrelsen for små skjermer */
+    font-size: clamp(
+      10px,
+      3vw,
+      16px
+    ); /* Juster skriftstørrelsen for små skjermer */
   }
 
   .lenke {
@@ -135,7 +143,7 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: center;
   width: 100%;
   transition: all 1s ease;
   box-sizing: border-box; /* Forutsigbar oppførsel med padding og margin */
@@ -162,10 +170,10 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;  /* Justerer elementene til venstre */
-  flex-wrap: nowrap;  /* Hindre at elementene bryter til ny linje */
-  align-items: flex-end;  /* Justerer innholdet til bunnen av port */
-  min-height: 500px;/* Sett min høyde for å sikre at div-en har plass */
+  justify-content: space-between; /* Justerer elementene til venstre */
+  flex-wrap: nowrap; /* Hindre at elementene bryter til ny linje */
+  align-items: flex-end; /* Justerer innholdet til bunnen av port */
+  min-height: 500px; /* Sett min høyde for å sikre at div-en har plass */
   transition: 1s ease;
   margin-bottom: 10%;
 }
@@ -178,8 +186,8 @@
   .port {
     min-height: 150px;
     flex-direction: column;
-    flex-wrap: wrap;  
-    align-items: flex-end;  /* Justerer innholdet til bunnen av port */
+    flex-wrap: wrap;
+    align-items: flex-end; /* Justerer innholdet til bunnen av port */
   }
 }
 
@@ -198,7 +206,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;  /* Justerer innholdet til bunnen av port */
+  align-items: flex-end; /* Justerer innholdet til bunnen av port */
   width: 40%;
   height: 100%;
 }
@@ -235,7 +243,7 @@
 
   visibility: visible;
   backface-visibility: hidden;
-  transition: 1.0s ease;
+  transition: 1s ease;
   height: auto;
   max-width: 100%;
 }
@@ -252,16 +260,20 @@
   .imagetext {
     font-size: 12px;
   }
-
 }
 
 .image:hover {
   cursor: pointer;
- /* opacity: 0.4;*/
+  /* opacity: 0.4;*/
   transform: scale(1.05);
 
   filter: brightness(50%); /* Gjør bildet mørkere */
-  background-color: rgba(0, 0, 0, 0.5); /* Legg til en svart gjennomsiktig farge */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Legg til en svart gjennomsiktig farge */
 }
 
 .portfolio h3 {
@@ -274,16 +286,16 @@
 @keyframes animate-in {
   0% {
     opacity: 0;
-    transform: translateY(50px);  /* Starter nedenfra */
+    transform: translateY(50px); /* Starter nedenfra */
   }
   100% {
     opacity: 1;
-    transform: translateY(0);  /* Slutter på normal posisjon */
+    transform: translateY(0); /* Slutter på normal posisjon */
   }
 }
 
 .port {
-  opacity: 0;  /* Start med at elementet er usynlig */
+  opacity: 0; /* Start med at elementet er usynlig */
   animation: animate-in 2s ease-out forwards; /* Legg til animasjon */
 }
 
@@ -292,7 +304,7 @@
   display: flex;
   flex-direction: column; /* Plasser div-elementene vertikalt */
   align-items: center; /* Sentrer elementene horisontalt */
-  justify-content: center; /* Sentrum vertikalt også */  
+  justify-content: center; /* Sentrum vertikalt også */
   z-index: 3;
   width: 100%;
   text-align: center;
@@ -326,7 +338,6 @@
   /*font-size: 1vw;*/
   font-size: clamp(7px, 1.5vw, 16px); /* Responsiv skriftstørrelse */
   align-self: flex-start; /* Plasser teksten øverst */
-
 }
 
 .tekstomoss {
@@ -336,7 +347,7 @@
   color: #434343;
   max-width: 40%;
   /*font-size: 1vw;*/
-  font-size: clamp(6px, 1.0vw, 15px); /* Responsiv skriftstørrelse */
+  font-size: clamp(6px, 1vw, 15px); /* Responsiv skriftstørrelse */
   line-height: 1.8;
   align-self: flex-start; /* Plasser teksten øverst */
 
@@ -349,7 +360,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center; /* Sentrum for bildene */
-  flex-wrap: wrap; /* Tillater radbryting hvis nødvendig */  
+  flex-wrap: wrap; /* Tillater radbryting hvis nødvendig */
 }
 
 .omoss_bilder img {
@@ -365,7 +376,7 @@
   .omossgrid {
     flex-direction: column;
   }
-  
+
   #overskrift_omoss {
     text-align: left; /* Til venstre for større skjermer */
   }
@@ -373,19 +384,17 @@
   p.tekstomoss {
     max-width: 100%;
   }
-  
+
   .omoss_bilder {
-  flex-direction: row;
-  justify-content: space-between;
-  height: 30%;
-  gap:5%;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 30%;
+    gap: 5%;
   }
 
   .omoss_bilder img {
     max-height: 100px; /* Bilder tilpasser seg containerens bredde */
-
   }
-  
 }
 
 @media (min-width: 1024px) {
@@ -401,7 +410,7 @@
   position: fixed; /* Fixed/sticky position */
   bottom: 40px; /* Place the button at the bottom of the page */
   right: 40px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
+  z-index: 98; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
   background-color: transparent; /* Set a background color */
@@ -428,7 +437,6 @@
 /*telefon*/
 
 @media (max-width: 600px) {
-
   /*@keyframes logoscroll {
     from {
       position: fixed;
