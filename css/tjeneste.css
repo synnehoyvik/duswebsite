@@ -1,38 +1,28 @@
 .tjenestefelt {
-  height: 80vh;
-  margin-top: 10%;
-  background-color: #F7F4F0;
-
-}
-
-.tjenesteboks {
-  position: relative;
   width: 100%;
-  height: auto;
-  background-color: #F7F4F0;
   box-sizing: border-box; /* Padding inkludert */
-
-  display: flex; /* Bruk flexbox */
-  flex-direction: column; /* Plasserer elementene over hverandre */
-  align-items: center; /* Sentrerer elementene horisontalt */
-  justify-content: center; /* Sentrerer elementene vertikalt */
-  gap: 5%; /* Avstand mellom barna */
-  top: auto; /* Legger avstand over forelder-elementet */
+  margin-top: 15%;
+  padding-left: 7%;
+  padding-right: 7%;
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  /* Justerer elementene til venstre */
+  align-content: flex-start;
 }
 
 .introtjenester {
   font-family: "classico-urw", sans-serif;
   font-weight: 150;
   font-style: normal; 
-  line-height: 1.6;
+  line-height: 1.4;
   color: #000000;
+  
   font-size: clamp(10px, 2.5vw, 30px); 
   text-align: left;
-  width: 45%; /* Juster bredde etter behov */
+  width: 55%; /* Juster bredde etter behov */
   transition: 2s ease;
   opacity: 1;
-  box-sizing: border-box; /* Padding inkludert */
-  padding-top: 10%;
 }
 
 /* Responsiv tilpasning for mobil */
@@ -63,8 +53,8 @@
   width: 100%;
   transition: all 1s ease;
   box-sizing: border-box; /* Forutsigbar oppførsel med padding og margin */
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 12%;
+  padding-right: 12%;
   margin-top: 10%;
   margin-bottom: 10%;
 }
@@ -88,10 +78,14 @@
   flex-direction: row;
   justify-content: space-between;  /* Justerer elementene til venstre */
   flex-wrap: nowrap;  /* Hindre at elementene bryter til ny linje */
-  align-items: flex-end;  /* Justerer innholdet til bunnen av port */
+  align-items: flex-start;  /* Justerer innholdet til bunnen av port */
   min-height: 500px;/* Sett min høyde for å sikre at div-en har plass */
   transition: 1s ease;
   margin-bottom: 10%;
+  border-top: 1px solid #666669; /* Toppborders */
+  box-sizing: border-box; /* Forutsigbar oppførsel med padding og margin */
+  padding-top: 3%;
+
 }
 
 /* Responsiv tilpasning for mobil */
@@ -107,10 +101,6 @@
   }
 }
 
-.tjenesterboks:nth-child(2n + 1) {
-  flex-direction: row-reverse;
-  justify-content: baseline;
-}
 
 .tjenesterboks:hover div {
   cursor: pointer;
@@ -122,20 +112,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;  /* Justerer innholdet til bunnen av port */
+  align-items: flex-start;  /* Justerer innholdet til bunnen av port */
   width: 40%;
   height: 100%;
 }
 
-
 .imagetjenester {
   display: block;
-
   visibility: visible;
   backface-visibility: hidden;
   transition: 1.0s ease;
   height: auto;
-  max-width: 100%;
+  max-width: 40%;
 }
 
 /* Responsiv tilpasning for mobil */

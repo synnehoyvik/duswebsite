@@ -318,6 +318,13 @@
   text-align: left;
 }
 
+.omosstest {
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  width:50%;
+}
+
 #overskrift_omoss {
   font-family: "classico-urw", sans-serif;
   font-weight: 400;
@@ -334,7 +341,6 @@
   font-weight: 300;
   font-style: normal;
   color: #434343;
-  max-width: 40%;
   /*font-size: 1vw;*/
   font-size: clamp(6px, 1.0vw, 15px); /* Responsiv skriftstørrelse */
   line-height: 1.8;
