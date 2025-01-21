@@ -6,13 +6,13 @@
 html {
   scroll-behavior: smooth;
   width: 100%; /* Sikrer at html alltid dekker hele bredden */
-  margin: 0;   /* Fjerner uønsket margin */
-  padding: 0;  /* Fjerner standard padding */
+  margin: 0; /* Fjerner uønsket margin */
+  padding: 0; /* Fjerner standard padding */
   box-sizing: border-box; /* Forutsigbar oppførsel med padding og margin */
 }
 
 body {
-  background-color: #F7F4F0;
+  background-color: #f7f4f0;
   color: #000000;
   display: flex; /* Aktiverer Flexbox */
   flex-direction: column; /* Plasserer innholdet vertikalt (valgfritt, hvis det er flere elementer) */
@@ -34,7 +34,7 @@ header {
   top: 0;
   width: 100%;
   height: 10vh; /* Mer passende høyde for headeren */
-  background-color: #F7F4F0; /* Valgfri bakgrunnsfarge */
+  background-color: #f7f4f0; /* Valgfri bakgrunnsfarge */
   z-index: 100; /* Sørg for at headeren er over innhold */
 }
 
@@ -48,7 +48,6 @@ header {
 li {
   list-style: none;
 }
-
 
 a:link,
 a:visited {
@@ -70,7 +69,7 @@ a:visited {
 }
 
 .navbar a {
-  color: #000000;;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -154,7 +153,7 @@ a:visited {
   top: -100%;
   width: 97%;
   opacity: 0;
-  background-color: #F7F4F0;
+  background-color: #f7f4f0;
   /*width: fit-content;*/
 }
 
@@ -172,22 +171,33 @@ a:visited {
 .navndus {
   font-family: "classico-urw", sans-serif;
   font-weight: 600;
- /* font-size: 17px;*/
- font-size: clamp(12px, 3vw, 17px); /* Skalerer mellom 12px og 17px basert på skjermstørrelse */font-size: clamp(12px, 3vw, 17px); /* Skalerer mellom 12px og 17px basert på skjermstørrelse */  margin-left: 5%;
+  /* font-size: 17px;*/
+  font-size: clamp(
+    12px,
+    3vw,
+    17px
+  ); /* Skalerer mellom 12px og 17px basert på skjermstørrelse */
+  font-size: clamp(
+    12px,
+    3vw,
+    17px
+  ); /* Skalerer mellom 12px og 17px basert på skjermstørrelse */
+  margin-left: 5%;
 }
 
 /* Safari-spesifik stil */
-@media not all and (min-resolution:.001dpcm) { 
+@media not all and (min-resolution: 0.001dpcm) {
   .navndus {
     font-weight: 100;
   }
 }
 
 .bakgrunnsbilde_parallax2 {
-  height: 20vh; /* Full høyde */
+  /* Full høyde */
   width: 100%;
   background-color: #171717;
   bottom: 0;
+  z-index: 99;
 }
 
 /* footer*/
@@ -235,7 +245,6 @@ p.lyst {
   color: #ffffff;
   /*font-size: 15px;*/
   font-size: clamp(10px, 2vw, 15px); /* Responsiv skriftstørrelse */
-
 }
 
 a.lyst {
@@ -276,7 +285,7 @@ a.lyst:hover {
   .bakgrunnsbilde_parallax2 {
     height: 20%;
   }
-  
+
   footer {
     flex-direction: column; /* Går til kolonne på mobil */
     align-items: center; /* Sentrerer elementene */
@@ -285,7 +294,7 @@ a.lyst:hover {
   }
 
   #bottombar {
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: space-around;
     width: 100%; /* Fyller hele bredden */
   }
@@ -340,7 +349,7 @@ a.lyst:hover {
   }
 
   .menu {
-    background-color: #F7F4F0;
+    background-color: #f7f4f0;
   }
 
   .menu.active {
