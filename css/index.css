@@ -299,6 +299,13 @@
   animation: animate-in 2s ease-out forwards; /* Legg til animasjon */
 }
 
+
+
+
+
+
+
+
 /*om oss*/
 .omoss {
   display: flex;
@@ -309,7 +316,7 @@
   width: 100%;
   text-align: center;
   color: #000000;
-  background-color: #ffffff;
+  
   border-radius: 50px 50px 0 0;
   transition: 1.2s all ease;
   box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1); /* Myk og svak skygge */
@@ -324,26 +331,27 @@
   padding-top: 2%;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: left;
 }
 
 .omosstest {
-  flex-direction: column;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  gap: 30em;
   text-align: left;
-  width:50%;
+  
 }
 
 #overskrift_omoss {
   font-family: "classico-urw", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #8a8a8a;
+  color: #000000;
   /*font-size: 1vw;*/
-  font-size: clamp(7px, 1.5vw, 16px); /* Responsiv skriftstørrelse */
+  font-size: clamp(7px, 3vw, 60px); /* Responsiv skriftstørrelse */
   align-self: flex-start; /* Plasser teksten øverst */
 }
 
@@ -355,7 +363,6 @@
   /*font-size: 1vw;*/
   font-size: clamp(6px, 1vw, 15px); /* Responsiv skriftstørrelse */
   line-height: 1.8;
-  align-self: flex-start; /* Plasser teksten øverst */
 
   /*width: 100%;
   line-height: 2;
@@ -364,23 +371,31 @@
 
 .omoss_bilder {
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Sentrum for bildene */
+  flex-direction: row;
+ 
   flex-wrap: wrap; /* Tillater radbryting hvis nødvendig */
+  height: auto;
+  justify-content: space-between;
+  
 }
 
 .omoss_bilder img {
-  max-width: 150px; /* Bilder tilpasser seg containerens bredde */
-  max-height: 100%; /* Begrens maksimal høyde */
-  width: auto; /* Sikrer at bildene beholder proporsjonene */
-  height: auto; /* Sikrer at bildene beholder proporsjonene */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Myk skygge */
+  height: 20em;
 }
 
+.omoss_bilder img:nth-child(2) {
+margin: 0 5em 0 5em;
+}
 /* Responsivt gridoppsett */
 @media (max-width: 768px) {
   .omossgrid {
     flex-direction: column;
+  }
+
+  .omosstest{
+    flex-direction: column;
+    gap: 0;
   }
 
   #overskrift_omoss {
@@ -392,14 +407,10 @@
   }
 
   .omoss_bilder {
-    flex-direction: row;
-    justify-content: space-between;
-    height: 30%;
-    gap: 5%;
+    display: none;
   }
 
   .omoss_bilder img {
-    max-height: 100px; /* Bilder tilpasser seg containerens bredde */
   }
 }
 

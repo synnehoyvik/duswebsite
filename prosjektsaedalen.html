@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/sitecss.css" />
+    <link rel="stylesheet" href="css/prosjektmal.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/vfr3hyb.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="icon" type="image/x-icon" href="img/Logo_test2.png" />
+    <script src="js/prosjektMalContent.js"></script>
+  </head>
+  <body>
+    
+    <header>
+      <a href="index.html">
+        <img class="logohjem" src="img/logo_lys.png" alt="Logo Dus" />
+      </a>
+
+    <h2 class="navndus"> DUS ARKITEKTER </h2>
+    
+      <nav class="navbar" id="navbar">
+
+        <ul class="menu"><!-- start meny -->
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">HJEM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#portfolio">PROSJEKTER</a>
+          </li>
+          <li class="nav-item">
+            <a href="tjenester.html" class="nav-link">TJENESTER</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#overskrift_omoss" class="nav-link">OM OSS</a>
+          </li>
+          <li class="nav-item">
+            <a href="index.html#bottombar" class="nav-link">KONTAKT</a>
+          </li>
+        </ul><!-- slutt meny -->
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <div id="galleri">
+      <!-- Slideshow container -->
+      <div id="slideshow-container">
+        <!-- Full-width images with number and caption text --
+        <div class="mySlides fade">
+          <img src="img/hytte.jpg" alt="Tittel" />
+          <p>tittel</p>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/kontor.jpg" alt="tittel" />
+          <p>tittel</p>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/pergola.jpg" alt="tittel" />
+          <p>tittel</p>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/logo.png" alt="tittel" />
+          <p>tittel</p>
+        </div>
+      --></div>
+      <!-- Next and previous buttons -->
+      <div class="buttonscont">
+        <li class="nav-link2">
+          <a class="prev" onclick="plusSlides(-1)">Prev</a>
+        </li>
+        <li class="nav-link2">
+          <a class="next" onclick="plusSlides(1)">Next</a>
+        </li>
+      </div>
+    </div>
+    <section class="info">
+      <ul>
+        <!--
+        <li>
+          <p>Prosjektnavn</p>
+          <p>Mal</p>
+        </li>
+        <li>
+          <p>Prosjektnavn</p>
+          <p>Mal</p>
+        </li>
+        <li>
+          <p>Prosjektnavn</p>
+          <p>Mal</p>
+        </li> -->
+      </ul>
+      <article>
+        <!-- <h2 style="font-size: 16px;">Hytte på Samnøy</h2>
+       
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et fugit
+          impedit pariatur repellendus vero consequuntur, error culpa
+          voluptatibus eum consequatur nisi, possimus ad praesentium adipisci.
+          Debitis assumenda totam error quas? Lorem, ipsum dolor sit amet
+          consectetur adipisicing elit. Ex eius nemo amet, vitae distinctio
+          dignissimos quo odit, exercitationem reiciendis deleniti sint omnis
+          tempora maxime ratione assumenda? Dolor illum quae minima.
+        </p>
+      --></article>
+    </section>
+    <script>
+      addProsjektContent(
+        "Enebolig i Bergen ",
+        [
+          ["img/saedalen/fasade_nettside.jpeg", "Fasade Sørøst"],
+          ["img/saedalen/IMG_9586.JPG", "Foto, tomt"],
+          ["img/saedalen/IMG_9555.JPG", "Foto, utsikt"],
+        ],
+        [
+          ["PROSJEKT", "<span style='color: black;'>Transformasjon av enebolig i Bergen</span>"],
+          ["STED", "<span style='color: black;'>BERGEN, NORGE</span>"],
+          ["ÅRSTALL", "<span style='color: black;'>2024 - d.d.</span>"],
+        ],
+        "Pågående prosjekt. "
+      );
+    </script>
+ <div class="bakgrunnsbilde_parallax2">
+  <footer>
+    <p class="lyst"> KONTAKT OSS</p>
+
+    <div id="bottombar">
+      <p class="bottombartxt" style="text-decoration: none">
+        © Dus Arkitekter AS
+      </p>
+
+      <a class="lyst" href="mailto:post@dusarkitekter.no" style="text-decoration: none">post@dusarkitekter.no</a>
+      
+      <p class="bottombartxt">
+        <a class="smicon" href="https://linkedin.com"
+          ><ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a class="smicon" href="https://instagram.com"
+          ><ion-icon name="logo-instagram"></ion-icon
+        ></a>
+      </p>
+    </div>
+    
+  </footer>
+</div>
+    <script src="js/sitejs.js"></script>
+    <script src="js/prosjektmal.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
